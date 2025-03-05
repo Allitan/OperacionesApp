@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OperacionesApp.Pages.AreaCirculo"
              Title="AreaCirculo">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="30" Spacing="5">
+        <Label Text="Ingrese el radio del circulo" VerticalOptions="Start" HorizontalOptions="Start" />
+        <Entry x:Name="txtRadio" Placeholder="Radio" Keyboard="Numeric" />
+
+        <Label Text="Resultado" VerticalOptions="Start" HorizontalOptions="Start" />
+        <Entry x:Name="txtResultado" IsReadOnly="True" />
+
+        <Button Text="Calcular" Background="Green" x:Name="btnCalcular" Clicked="btnCalcular_Clicked" />
+        <Button Text="Limpiar" Background="Red" x:Name="btnLimpiar" Clicked="btnLimpiar_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
